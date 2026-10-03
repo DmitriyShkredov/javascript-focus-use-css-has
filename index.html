@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Форма ФИО</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="desktop" aria-hidden="true">
+    <div class="menubar">
+      <b>Safari</b>
+      <span>Файл</span>
+      <span>Правка</span>
+      <span>Вид</span>
+      <span>Окно</span>
+    </div>
+
+    <section class="background-window">
+      <div class="background-title">
+        <i></i><i></i><i></i>
+      </div>
+      <div class="background-content">
+        <div class="sidebar"></div>
+        <div class="rows">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <div class="dock">
+      <i></i><i></i><i></i><i></i><i></i>
+    </div>
+  </div>
+
+  <main class="overlay">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="title">
+      <header class="titlebar">
+        <div class="traffic-lights" aria-hidden="true">
+          <i></i><i></i><i></i>
+        </div>
+        <span>Профиль</span>
+      </header>
+
+      <div class="content">
+        <form id="profileForm">
+          <h1 id="title">Введите ФИО</h1>
+
+          <label class="field" for="lastName">
+            <span>Фамилия</span>
+            <input id="lastName" name="lastName" type="text" autocomplete="family-name" placeholder="Иванов" required>
+          </label>
+
+          <label class="field" for="firstName">
+            <span>Имя</span>
+            <input id="firstName" name="firstName" type="text" autocomplete="given-name" placeholder="Иван" required>
+          </label>
+
+          <label class="field" for="middleName">
+            <span>Отчество</span>
+            <input id="middleName" name="middleName" type="text" autocomplete="additional-name" placeholder="Иванович" required>
+          </label>
+
+          <button class="primary" type="submit">Сохранить</button>
+        </form>
+
+        <div class="success" id="success" hidden>
+          <div class="success-icon" aria-hidden="true">✓</div>
+          <h2>Данные сохранены</h2>
+          <p id="savedName"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
